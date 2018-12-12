@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/platinum-fund/airdrop/issues"
   },
-  "homepage": "https://github.com/platinum-fund/airdrop#readme"
+  "homepage": "https://github.com/platinum-fund/airdrop#readme",
+  "dependencies": {
+    "web3": "^1.0.0-beta.37"
+  }
 }
