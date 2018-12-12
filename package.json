@@ -1,0 +1,22 @@
+{
+  "name": "airdrop",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platinum-fund/airdrop.git"
+  },
+  "keywords": [
+    "airdrop"
+  ],
+  "author": "b0rey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/platinum-fund/airdrop/issues"
+  },
+  "homepage": "https://github.com/platinum-fund/airdrop#readme"
+}

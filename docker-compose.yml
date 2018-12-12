@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  node:
+    image: node
+    command: tail -F /dev/null
+    volumes:
+      - ./:/app
+    environment:
+      - ETHEREUM_NET=mainnet
