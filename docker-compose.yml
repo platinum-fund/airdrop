@@ -9,6 +9,5 @@ services:
       - ./:/app
     environment:
       - ETHEREUM_NET
-      - INFURA_PROJECT_ID
       - SENDER_PRIVATE_KEY
       - CONTRACT_ADDRESS
