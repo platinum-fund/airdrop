@@ -8,4 +8,7 @@ services:
     volumes:
       - ./:/app
     environment:
-      - ETHEREUM_NET=mainnet
+      - ETHEREUM_NET
+      - INFURA_PROJECT_ID
+      - SENDER_PRIVATE_KEY
+      - CONTRACT_ADDRESS
