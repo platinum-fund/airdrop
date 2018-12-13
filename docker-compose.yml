@@ -4,7 +4,8 @@ services:
 
   node:
     image: node
-    command: tail -F /dev/null
+    working_dir: /app
+    command: npm start
     volumes:
       - ./:/app
     environment:
