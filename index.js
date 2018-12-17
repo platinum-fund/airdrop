@@ -7,6 +7,7 @@ const net = process.env.ETHEREUM_NET
 const infuraURL = `wss://${net}.infura.io/ws`
 const web3 = new Web3(new Web3.providers.WebsocketProvider(infuraURL))
 
+let nonce = 0
 const coefficientGas = 1.15
 const contractAddress = process.env.CONTRACT_ADDRESS
 const sender = web3.eth.accounts.privateKeyToAccount(
@@ -27,11 +28,12 @@ const sendToken = async ({ address, amount }) => {
     Web3.utils.toWei(`${amount}`)
   )
 
-  const [gasPrice, nonce] = await Promise.all([
+  const [gasPrice, _nonce] = await Promise.all([
     getGasPrice(),
     web3.eth.getTransactionCount(sender.address)
   ])
 
+  nonce = _nonce <= nonce ? nonce + 1 : _nonce
   const tx = {
     from: sender.address,
     to: contractAddress,
